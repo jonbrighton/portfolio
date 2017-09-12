@@ -1,0 +1,58 @@
+
+.branding-background {
+  background-color: #F5F5F5;
+  height: 50vh;
+}
+.branding-background img {
+
+  height: 200px;
+  margin-left: 5%;
+  margin-top: 20%;
+  // margin-left: 20%;
+}
+.premier-header {
+  text-align: center;
+  font-weight: lighter;
+}
+.premier-header h2 {
+  font-weight: lighter;
+}
+li {
+  line-height: 1.5;
+}
+@media screen and (min-width: 64em) {
+  .push-over {
+    // justify-content: flex-end;
+    // width: 90%;
+  }
+}
+@media screen  and (min-width: 48em) {
+  .push {
+    display:flex;
+    justify-content: flex-end;
+  }
+  .push-over {
+    width: 84%;
+  }
+  .branding-background {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 70vh;
+  }
+  .branding-background img {
+    height: 400px;
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+.branding-box {
+  width: 100%;
+  height: 20vh;
+  background: black;
+  color: white;
+}
+// .brief2,
+// .brief {
+//   display:flex;
+//   justify-content: space-between;
+// }
+}

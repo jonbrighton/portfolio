@@ -1,0 +1,20 @@
+.bottom-home {
+  background-color: #E9EAEA;
+}
+.map-location {
+
+  height: 500px;
+}
+@media screen  and (min-width: 48em) {
+.description {
+  width: 60%;
+}
+.contact {
+  display: flex;
+
+
+}
+.map-location {
+  width: 40vw;
+}
+}

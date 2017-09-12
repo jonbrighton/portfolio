@@ -1,0 +1,108 @@
+.move
+ {
+  animation: move 3s forwards;
+  animation-delay: 2s;
+}
+.move4 {
+  animation: move4 3s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes link-color {
+  from {
+    color: black;
+  }
+  to {
+    color: #84f9d8;
+  }
+}
+
+.move4 a,
+.move a {
+  animation: link-color 3s forwards;
+}
+
+.move4 a:hover {
+  color:orange;
+}
+
+// .move a {
+//   animation: move 3s forwards;
+//   animation-delay: 2s;
+// }
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-90deg);
+    color: #84f9d8;
+    margin-left: 55%;
+    margin-right: -13%;
+  }
+}
+@keyframes move h2{
+  from {
+    color:black;
+
+  }
+  to {
+
+    color: #84f9d8;
+
+  }
+}
+@keyframes move4 {
+  from {
+    transform: rotate(0deg);
+
+  }
+  to {
+    transform: rotate(90deg);
+    color: #84f9d8;
+    width: 15.6em;
+    margin-right: 57%;
+    margin-top:10%;
+    padding-top: 39%;
+
+  }
+
+}
+@media screen  and (min-width: 48em){
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-90deg);
+
+    margin-left: 50%;
+    margin-right: -21%;
+  }
+
+}
+// @keyframes move a {
+//   from {
+//     color: black;
+//   }
+//   to {
+//     color: #84f9d8;
+//   }
+// }
+@keyframes move4 {
+  from {
+    transform: rotate(0deg);
+
+  }
+  to {
+    transform: rotate(90deg);
+    color: #84f9d8;
+    width: 250px;
+    margin-right: 57%;
+    margin-top: 7%;
+    padding-top: 39%;
+
+  }
+
+}
+}
