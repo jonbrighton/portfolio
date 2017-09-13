@@ -1,6 +1,6 @@
 const React = require('react')
 
-class Link extends React.Component {
+class AnchorLink extends React.Component {
   constructor(props) {
     super(props)
     this.smoothScroll = this.smoothScroll.bind(this)
@@ -23,4 +23,4 @@ class Link extends React.Component {
   }
 }
 
-module.exports = Link
+module.exports = AnchorLink
