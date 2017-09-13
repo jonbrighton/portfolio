@@ -165,9 +165,9 @@ const Link = __webpack_require__(1).Link;
 
 const About = __webpack_require__(13);
 const Home = __webpack_require__(14);
-const Restaurant = __webpack_require__(17);
-const Cause = __webpack_require__(18);
-const Ecommerce = __webpack_require__(19);
+const Restaurant = __webpack_require__(18);
+const Cause = __webpack_require__(19);
+const Ecommerce = __webpack_require__(20);
 const Branding = __webpack_require__(6);
 const Sticky = __webpack_require__(2);
 const Maps = __webpack_require__(4);
@@ -606,21 +606,10 @@ const Link = __webpack_require__(1).Link;
 const Maps = __webpack_require__(4);
 const Footer = __webpack_require__(7);
 const Bottom = __webpack_require__(5);
-
-// const ScrollableAnchor = require('react-scrollable-anchor');
-
+const AnchorLink = __webpack_require__(16);
 
 class Home extends React.Component {
 
-  componentDidMount() {
-    const scrollToComponent = __webpack_require__(16);
-    scrollToComponent(this.Blue, {
-      offset: 0,
-      align: 'middle',
-      duration: 1000,
-      ease: 'inCirc'
-    });
-  }
   render() {
     return React.createElement(
       'div',
@@ -668,17 +657,14 @@ class Home extends React.Component {
               'Showcase'
             )
           ),
-          React.createElement('div', { className: 'img', onClick: () => scrollToComponent(this.Indigo, {
-              offset: 0,
-              align: 'top',
-              duration: 1500,
-              ease: 'inExpo'
-            }) })
+          React.createElement(
+            AnchorLink,
+            { className: 'img', href: '#down' },
+            'Down'
+          )
         )
       ),
-      React.createElement('section', { className: 'indigo', ref: section => {
-          this.Indigo = section;
-        } }),
+      React.createElement('section', { id: 'down' }),
       React.createElement(
         'div',
         { className: 'showcase-title' },
@@ -945,12 +931,45 @@ module.exports = require("google-maps");
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-scroll-to-component");
+const React = __webpack_require__(0);
+
+class Link extends React.Component {
+  constructor(props) {
+    super(props);
+    this.smoothScroll = this.smoothScroll.bind(this);
+  }
+  componentDidMount() {
+    __webpack_require__(17).polyfill();
+  }
+  smoothScroll(e) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href').slice(1);
+    window.scroll({
+      top: document.getElementById(`${id}`).offsetTop,
+      behavior: 'smooth'
+    });
+  }
+  render() {
+    return React.createElement(
+      'a',
+      { href: this.props.href, onClick: this.smoothScroll },
+      this.props.children
+    );
+  }
+}
+
+module.exports = Link;
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports) {
+
+module.exports = require("smoothscroll-polyfill");
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const React = __webpack_require__(0);
@@ -1096,7 +1115,7 @@ class Restaurant extends React.Component {
 module.exports = Restaurant;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const React = __webpack_require__(0);
@@ -1247,7 +1266,7 @@ class Cause extends React.Component {
 module.exports = Cause;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const React = __webpack_require__(0);
