@@ -59,7 +59,7 @@
 /******/
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "95f9678cf43e522508c8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9da75121397ddebff89d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -28520,7 +28520,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root
 
 const React = __webpack_require__(3);
 
-class Link extends React.Component {
+class AnchorLink extends React.Component {
   constructor(props) {
     super(props);
     this.smoothScroll = this.smoothScroll.bind(this);
@@ -28545,7 +28545,7 @@ class Link extends React.Component {
   }
 }
 
-module.exports = Link;
+module.exports = AnchorLink;
 
 /***/ }),
 /* 244 */
