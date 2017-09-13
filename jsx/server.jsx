@@ -22,7 +22,7 @@ app.get('*', (req, res) => {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
           <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:300" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
       </head>
       <body>
         <div class="wrapper">
@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
         <footer>
           <small><a href="https://opensource.org/licenses/MIT">MIT</a></small>
         </footer>
-        <script src="js/bundle.js"></script>
+        <script src="/js/bundle.js"></script>
       </body>
       </html>
     `)
