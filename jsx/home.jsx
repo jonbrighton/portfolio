@@ -28,7 +28,7 @@ class Home extends React.Component {
               <Link to="/branding">Showcase</Link>
             </h2>
             {/* <a href='#section1'> tex</a> */}
-            <AnchorLink className="img" href="#down">Down</AnchorLink>
+            <AnchorLink href="#down"></AnchorLink>
 
           </div>
 

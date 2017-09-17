@@ -18,7 +18,7 @@ class AnchorLink extends React.Component {
   }
   render() {
     return (
-      <a href={this.props.href} onClick={this.smoothScroll}>{this.props.children}</a>
+      <a href={this.props.href} className="img" onClick={this.smoothScroll}>{this.props.children}</a>
     )
   }
 }
