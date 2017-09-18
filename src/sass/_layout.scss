@@ -35,6 +35,72 @@ footer {
   min-height: 50vh;
 }
 
+/* Drawer
+------------------------------------------*/
+
+.open {
+  color: green;
+  position: fixed;
+  top: 10px;
+  left: .5em;
+  background-image: url(/img/menu.svg);
+  width: 32px;
+  height: 32px;
+}
+
+.close {
+  color: red;
+  position: absolute;
+  top: 6px;
+  left: .5em;
+  background-image: url(/img/clear.svg);
+  background-color: yellow;
+  width: 32px;
+  height: 32px;
+}
+
+.open span,
+.close span {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.open-drawer {
+  position:relative;
+  overflow:hidden;
+  height: 100vh;
+  background: yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  width:250px
+}
+
+.close-drawer {
+  position:relative;
+  overflow:hidden;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  width:0
+}
+ @media screen and (min-width: 48em) {
+   .close-drawer {
+     width:250px;
+   }
+   .open,
+   .close {
+     display:none;
+   }
+ }
+
+
 // footer {
 //   background: black;
 //   min-height: 20vh;
